@@ -23,10 +23,14 @@ switch ($action) {
         ];
 
         $logMessage = [];
+        $logMessage[] = '#######################';
         $logMessage[] = date('Y-m-d H:i:s');
         $logMessage[] = '***********************';
         $logMessage[] = json_encode($clientInfo);
-        $logMessage[] = '***********************';
+        $logMessage[] = '#######################';
+        $logMessage[] = '';
+        $logMessage[] = '';
+        $logMessage[] = '';
 
         file_put_contents($logPath, implode(PHP_EOL, $logMessage));
 
