@@ -32,7 +32,7 @@ switch ($action) {
         $logMessage[] = '';
         $logMessage[] = '';
 
-        file_put_contents($logPath, implode(PHP_EOL, $logMessage));
+        file_put_contents($logPath, implode(PHP_EOL, $logMessage), FILE_APPEND);
 
         include_once __DIR__ . '/stub.php';
 
